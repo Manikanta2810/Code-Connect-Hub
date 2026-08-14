@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 20% 97%;
+    --foreground: 210 24% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 24% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 24% 10%;
+    --primary: 168 76% 28%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 16% 93%;
+    --secondary-foreground: 210 24% 16%;
+    --muted: 40 14% 93%;
+    --muted-foreground: 210 10% 40%;
+    --accent: 28 90% 52%;
+    --accent-foreground: 210 24% 10%;
+    --destructive: 0 72% 48%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 14% 88%;
+    --input: 210 14% 88%;
+    --ring: 168 76% 28%;
+    --radius: 0.65rem;
+    --chart-1: 168 76% 28%;
+    --chart-2: 28 90% 52%;
+    --chart-3: 210 40% 40%;
+    --chart-4: 190 60% 40%;
+    --chart-5: 40 60% 50%;
+    --sidebar-background: 40 20% 97%;
+    --sidebar-foreground: 210 24% 10%;
+    --sidebar-primary: 168 76% 28%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 16% 93%;
+    --sidebar-accent-foreground: 210 24% 16%;
+    --sidebar-border: 210 14% 88%;
+    --sidebar-ring: 168 76% 28%;
+  }
+
+  .dark {
+    --background: 210 28% 7%;
+    --foreground: 40 20% 96%;
+    --card: 210 24% 10%;
+    --card-foreground: 40 20% 96%;
+    --popover: 210 24% 10%;
+    --popover-foreground: 40 20% 96%;
+    --primary: 168 70% 42%;
+    --primary-foreground: 210 28% 7%;
+    --secondary: 210 20% 16%;
+    --secondary-foreground: 40 20% 96%;
+    --muted: 210 18% 14%;
+    --muted-foreground: 210 10% 65%;
+    --accent: 28 90% 55%;
+    --accent-foreground: 210 28% 7%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 16% 18%;
+    --input: 210 16% 18%;
+    --ring: 168 70% 42%;
+    --sidebar-background: 210 28% 7%;
+    --sidebar-foreground: 40 20% 96%;
+    --sidebar-primary: 168 70% 42%;
+    --sidebar-primary-foreground: 210 28% 7%;
+    --sidebar-accent: 210 20% 16%;
+    --sidebar-accent-foreground: 40 20% 96%;
+    --sidebar-border: 210 16% 18%;
+    --sidebar-ring: 168 70% 42%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
+  }
+
+  code,
+  .font-mono {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+  }
+}
+
+@layer utilities {
+  .grid-noise {
+    background-image:
+      linear-gradient(to right, hsl(var(--border) / 0.55) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.55) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .mesh-light {
+    background:
+      radial-gradient(ellipse 80% 50% at 10% -10%, hsl(168 70% 42% / 0.18), transparent 55%),
+      radial-gradient(ellipse 60% 40% at 90% 0%, hsl(28 90% 52% / 0.14), transparent 50%),
+      radial-gradient(ellipse 50% 40% at 50% 100%, hsl(210 40% 40% / 0.08), transparent 55%);
+  }
+
+  .mesh-dark {
+    background:
+      radial-gradient(ellipse 80% 50% at 10% -10%, hsl(168 70% 42% / 0.22), transparent 55%),
+      radial-gradient(ellipse 60% 40% at 90% 0%, hsl(28 90% 55% / 0.12), transparent 50%),
+      radial-gradient(ellipse 50% 40% at 50% 100%, hsl(210 50% 30% / 0.2), transparent 55%);
+  }
+}

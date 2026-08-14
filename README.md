@@ -1,24 +1,58 @@
-# Code-Connect-Hub
-## Tech Features
+# Code Connect Hub
 
-- ⚡️ **Vite** - Lightning fast build tool
-- 🔥 **React 18** - Latest React features
-- 🧩 **TypeScript** - Type safety for better developer experience
-- 🎨 **TailwindCSS** - Utility-first CSS framework
-- 🧰 **ShadCN UI** - Accessible and customizable UI components
-- 📱 **Responsive Design** - Mobile-first approach
-- 🧭 **React Router** - Easy client-side routing
-- 🔄 **React Query** - Data fetching and state management
-- 🧪 **Form Handling** - React Hook Form with Zod validation
+A developer collaboration platform to publish side projects, find builders by skill, connect, and message — ready to deploy on Vercel.
 
-## Getting Started
+## Stack
 
-### Prerequisites
+- Vite + React 18 + TypeScript
+- Tailwind CSS + shadcn/ui
+- React Router + TanStack Query
+- LocalStorage-backed demo data (no backend required)
+
+## Features
+
+- Landing page with project highlights
+- Explore projects (search, status, tags)
+- Developer directory with skill filters
+- Auth (sign up / log in) with demo accounts
+- Dashboard: edit profile + publish projects
+- Project detail pages with likes
+- Connection requests + in-app messaging
+- Light / dark theme
+
+## Demo accounts
+
+| Email | Password |
+|-------|----------|
+| aisha@example.com | demo1234 |
+| marcus@example.com | demo1234 |
+| sofia@example.com | demo1234 |
+| jordan@example.com | demo1234 |
+
+## Local development
+
+```bash
 npm install
-# or
-yarn
-# or
-pnpm install
+npm run dev
+```
 
-- Node.js 18+ 
-- npm or yarn or pnpm
+App runs at http://localhost:8080
+
+```bash
+npm run build
+npm run preview
+```
+
+## Deploy on Vercel
+
+1. Push this repo to GitHub.
+2. Import the project in [Vercel](https://vercel.com/new).
+3. If the app lives in a nested folder, set **Root Directory** to `Code-Connect-Hub`.
+4. Framework preset: **Vite** (Build: `npm run build`, Output: `dist`).
+5. Deploy — `vercel.json` already rewrites SPA routes to `index.html`.
+
+No environment variables are required for the demo.
+
+## Note on data
+
+All users, projects, connections, and messages are stored in the browser (`localStorage`). Use **Reset demo data** on the dashboard to restore seed content.
